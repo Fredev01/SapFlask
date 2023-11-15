@@ -1,22 +1,17 @@
 from flask import Flask
-# import os
+import os
 from flask_migrate import Migrate
 
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # Cofiguracion de la DB
-USER_DB = 'postgres'
-PASS_DB = 'angel'
-URL_DB = 'localhost'
-NAME_DB = 'sap_flask_db'
 
-""" 
 USER_DB = os.getenv("USER_DB")
 PASS_DB = os.getenv("PASSW_DB")
 URL_DB = os.getenv("URL_DB")
 NAME_DB = os.getenv("NAME_DB")
-"""
+
 
 FULL_URL_DB = f'postgresql://{USER_DB}:{PASS_DB}@{URL_DB}/{NAME_DB}'
 
